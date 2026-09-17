@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Zhe Chen — Research Assistant at Imperial College London, Hamlyn Centre, I-thread Lab. Wearable sensing, AI agents and Alzheimer's disease-related research.">
+  <meta name="theme-color" content="#183fe7">
+  <link rel="canonical" href="https://cz114.github.io/">
+  <title>Zhe Chen — Personal & Research Profile</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23183fe7'/%3E%3Cpath d='M16 20h27L20 44h28' fill='none' stroke='white' stroke-width='6'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=portrait-4">
+  <script src="site.js?v=profile-2" defer></script>
+</head>
+<body class="personal-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#about" aria-label="Zhe Chen, introduction"><span class="brand-mark" aria-hidden="true">zc.</span><span>Zhe Chen</span></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">＋</span></button>
+    <nav id="navigation" aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#background">Background</a><a class="nav-cv" href="assets/zhe-chen-cv.pdf">CV <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="profile-hero container" id="about" aria-labelledby="profile-title">
+      <div class="profile-copy">
+        <p class="eyebrow">MEDICAL ROBOTICS & AI RESEARCH</p>
+        <h1 id="profile-title">Zhe Chen<span class="name-period">.</span> <span lang="zh" class="chinese-name">陈哲</span></h1>
+        <p class="profile-subtitle">Connecting human signals<br> with <em>auditable AI.</em></p>
+        <p class="profile-intro">I am a <strong>Research Assistant at Imperial College London</strong>, working at the <strong>Hamlyn Centre's I-thread Lab</strong> on Alzheimer's disease (AD)-related projects in wearable sensing and AI agents, with supporting contributions to speech-metric checks and report interfaces. I also recently completed my MRes research in medical robotics at Imperial.</p>
+        <p class="profile-question">I am interested in making intelligent systems more useful, interpretable and grounded in evidence.</p>
+        <div class="interest-tags" aria-label="Research interests"><span>Multimodal sensing</span><span>AI agents</span><span>Human-centred systems</span></div>
+        <div class="profile-actions"><a class="button primary" href="#projects">Explore my projects <span aria-hidden="true">↓</span></a><a class="text-link" href="mailto:zc2325@ic.ac.uk">Email me <span aria-hidden="true">↗</span></a><a class="text-link neutral-link" href="https://github.com/CZ114" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <aside class="portrait-panel" aria-label="Profile photograph and current academic background">
+        <div class="portrait-frame"><img src="assets/portrait.jpg" alt="Zhe Chen" width="260" height="330"></div>
+        <div class="portrait-caption"><strong>Imperial College London</strong><span>Research Assistant</span><span>Hamlyn Centre · I-thread Lab</span></div>
+        <p class="degree-note">MRes research completed, September 2026.<br>Formal degree award pending.</p>
+      </aside>
+    </section>
+    <section class="projects-section container" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / RESEARCH PROJECTS</p><h2 id="projects-title">Research, in detail.</h2></div><p>Open a project to see what I built,<br>how I evaluated it, and what I learned.</p></div>
+      <div class="accordion-list"><details class="project-accordion" id="wearable">
+<summary><span class="project-number">01</span><span class="accordion-title"><span class="accordion-label">IMPERIAL COLLEGE LONDON · 2026</span><strong>Multimodal wearable-to-agent platform</strong><span>Sensing, analysis and an auditable evidence chain</span></span><span class="summary-result">82.9% movement accuracy · 70 recordings</span><span class="expand-icon" aria-hidden="true"></span></summary>
+<div class="accordion-body">
+          
+          
+          
+          <p class="case-lead">How can wearable measurements become useful analytical context without losing their timing, quality or provenance?</p>
+          <figure class="case-image"><img src="assets/platform.webp" alt="Sensing glove and implemented multimodal recording dashboard" width="1200" height="640"><figcaption>The sensing glove and data platform developed for the MRes study. Figure from the thesis.</figcaption></figure>
+          <div class="case-prose"><h3>The question</h3><p>Longitudinal monitoring brings together heterogeneous signals, missing measurements and uncertain interpretations. In the context of Alzheimer's disease research, I investigated an engineering pathway from wearable acquisition to bounded, auditable agent-assisted analysis.</p><h3>My contribution</h3><p>I developed the wearable sensing, data platform, agent framework and evaluation. The platform integrates ESP32-S3 PPG, GSR, IMU and audio channels; deterministic tools, retrieval, memory and bounded workflows turn stored recordings into structured reports with recoverable evidence and execution traces.</p></div>
+          <div class="evidence-stats"><div><strong>70</strong><span>recordings · 6 healthy volunteers</span></div><div><strong>82.9%</strong><span>best movement-state accuracy</span></div><div><strong>94.3%</strong><span>trace-complete agent outputs</span></div></div>
+          <div class="case-prose"><h3>What the evaluation showed</h3><p>All analysers received the same 18 record-level features and missingness information. Leave-one-subject-out (LOSO) evaluation covered five movement classes, keeping the held-out participant out of training and retrieval examples.</p></div>
+          <figure class="result-figure"><img src="assets/movement-comparison.webp" alt="Thesis chart comparing movement-state accuracy and macro-F1 for agents and supervised baselines" loading="lazy" width="1200" height="550"><figcaption>Input-matched movement-state evaluation. Best agent: 82.9% accuracy / 0.804 macro-F1; random forest: 78.6% / 0.713.</figcaption></figure>
+          <div class="case-prose"><p>In a separate fixed-model ablation, the complete tool-and-evidence configuration improved accuracy from <strong>35.7% to 81.4%</strong> (p = 0.0007), while parsing failures fell from 15 to 0.</p></div>
+          <figure class="result-figure narrow-figure"><img src="assets/ablation.webp" alt="Fixed-model ablation: accuracy increases from 35.7% for a bare prompt to 60.0%, 65.7% and 81.4% as tools and evidence are added" loading="lazy" width="1100" height="600"><figcaption>Fixed-model ablation: progressively adding tools and evidence to the analysis workflow.</figcaption></figure>
+          <div class="case-prose"><h3>Checking each part of the chain</h3></div>
+          <dl class="evidence-list"><div><dt>Acquisition integrity</dt><dd>No detected loss across <strong>136,562 frames in 27 serial recordings</strong>, with stable delivery around 50 Hz.</dd></div><div><dt>Signal estimation</dt><dd>Heart-rate MAE of <strong>5.57 bpm</strong> on 15 PPG-DaLiA participants under LOSO, versus 11.84 bpm for the dataset device baseline.</dd></div><div><dt>Tool-call evaluation</dt><dd><strong>400/400 BFCL scoring decisions</strong> matched the official evaluator; both scored the same model outputs at 91.25%.</dd></div><div><dt>Retrieval quality</dt><dd>Hybrid retrieval with HyDE achieved <strong>Recall@10 = 0.846</strong> and <strong>MRR = 0.753–0.774</strong> on a 24-question internal set.</dd></div><div><dt>Simulation behaviour</dt><dd>Mean dialogue turns decreased across six AgentClinic models; two model conditions improved task accuracy from 53% / 77% to 67% / 87%.</dd></div><div><dt>Output traceability</dt><dd><strong>66 of 70 outputs</strong> passed all trace checks, retaining recording identifiers, evidence, quality limitations and tool execution states for human inspection.</dd></div></dl>
+          
+          <div class="research-output"><span class="eyebrow">RESEARCH OUTPUT</span><p><strong>MRes thesis · September 2026</strong><br><cite>From Wearable Signals to Auditable Interpretation: A Multimodal Agent Platform for Longitudinal Monitoring in the Context of Alzheimer's Disease</cite></p><a class="text-link" href="https://github.com/CZ114/agent-framework" target="_blank" rel="noopener noreferrer">Agent framework repository <span aria-hidden="true">↗</span></a></div>
+        </div>
+</details>
+<details class="project-accordion" id="speech">
+<summary><span class="project-number">02</span><span class="accordion-title"><span class="accordion-label">IMPERIAL COLLEGE LONDON · RESEARCH SUPPORT · 2026</span><strong>Speech evidence & clinician report chat</strong><span>Manuscript in preparation · Target journal: Nature Medicine</span></span><span class="summary-result">Metric checks · report UI · partial chat implementation</span><span class="expand-icon" aria-hidden="true"></span></summary>
+<div class="accordion-body">
+          <p class="case-lead">Supporting a collaborative speech-research project through metric checks and report-interface work.</p>
+          <div class="case-prose"><h3>My contribution</h3><p>At Imperial College London's Hamlyn Centre / I-thread Lab, I contributed to specific supporting tasks within the speech project:</p></div>
+          <dl class="evidence-list">
+            <div><dt>Metric verification</dt><dd>Assisted with checking and verifying the project's speech metrics.</dd></div>
+            <div><dt>Report-page organisation</dt><dd>Helped organise the report page and its existing content for review.</dd></div>
+            <div><dt>Partial chat implementation</dt><dd>Implemented part of the chat functionality within the report interface.</dd></div>
+          </dl>
+          
+        </div>
+</details>
+<details class="project-accordion" id="federated">
+<summary><span class="project-number">03</span><span class="accordion-title"><span class="accordion-label">UNNC SMART MEDICINE LAB · 2023–2025</span><strong>Federated learning for home health data</strong><span>Confidence-thresholded pseudo-labelling for sleep-apnoea research</span></span><span class="summary-result">81% external-test accuracy</span><span class="expand-icon" aria-hidden="true"></span></summary>
+<div class="accordion-body">
+          <p class="case-lead">Can home heart-rate data contribute to collaborative modelling when expert labels are unavailable?</p>
+          <div class="project-stack" aria-label="Project technologies"><span>FATE</span><span>PyTorch</span><span>Ubuntu</span><span>Semi-supervised learning</span></div>
+          <div class="case-prose"><h3>My contribution</h3><p>At the UNNC Smart Medicine Laboratory, I configured FATE/PyTorch experiments and ran confidence-thresholded pseudo-labelling across <strong>four federated training rounds</strong> for sleep-apnoea research.</p><p>The comparison tested pseudo-labels against a control that treated home samples as normal. The <a href="#mqtt">MQTT sensing prototype</a> is presented separately as an Open Day demonstration.</p></div>
+          <div class="comparison-panel" aria-label="Fourth-round external-test accuracy: control 76 percent; pseudo-labelling 81 percent"><div><span>Control · home samples labelled normal</span><strong>76%</strong><div class="bar-track"><span style="width:76%"></span></div></div><div><span>Confidence-thresholded pseudo-labels</span><strong>81%</strong><div class="bar-track"><span style="width:81%"></span></div></div><p>Fourth round · external test set · +5 percentage points</p></div>
+          <figure class="result-figure"><a href="assets/federated-rounds.webp" target="_blank" rel="noopener" aria-label="Open original federated-learning Figure 11 at full size"><img src="assets/federated-rounds.webp" alt="Original manuscript Figure 11 comparing training and external-test accuracy over four rounds, with fourth-round external accuracy of 0.76 without labelling and 0.81 with semi-labelling and thresholding" width="1790" height="1116" loading="lazy"></a><figcaption><strong>Original manuscript · Figure 11.</strong> Training and external-test performance across four rounds. <a href="assets/federated-rounds.webp" target="_blank" rel="noopener">View full size ↗</a></figcaption></figure>
+          <div class="case-prose"><h3>Results and contribution</h3><p>The final sleep-apnoea class precision / recall were <strong>0.93 / 0.78</strong>. Overall external-test accuracy reached <strong>81%</strong>. The experiment supports using unlabelled home data to improve the tested collaborative model.</p><p>I contributed to drafting a collaborative manuscript and am listed as a co-author. The findings provide experimental evidence for modelling with home data that lack expert annotations.</p></div>
+          <figure class="result-figure portrait-result"><a href="assets/federated-validation.webp" target="_blank" rel="noopener" aria-label="Open original external-validation classification reports and confusion matrices"><img src="assets/federated-validation.webp" alt="Original manuscript Figure 13 showing the external-validation classification report and confusion matrix for each of the four training rounds" width="750" height="1217" loading="lazy"></a><figcaption><strong>Original manuscript · Figure 13.</strong> External-validation reports and confusion matrices. The fourth-round report is the final panel. <a href="assets/federated-validation.webp" target="_blank" rel="noopener">View full size ↗</a></figcaption></figure>
+          <div class="research-output"><span class="eyebrow">COLLABORATIVE MANUSCRIPT · DRAFT</span><p><cite>Advancing Smart Communities: redefining the health clouds in Web 3.0</cite></p><p class="output-note">Figures reproduced from the original manuscript.</p></div>
+        </div>
+</details>
+<details class="project-accordion" id="reinforcement">
+<summary><span class="project-number">04</span><span class="accordion-title"><span class="accordion-label">UNNC · UNDERGRADUATE DISSERTATION</span><strong>Reinforcement learning for container relocation</strong><span>A2C and DQN in a three-dimensional yard simulator</span></span><span class="summary-result">40% fewer moves vs random · complex scenarios</span><span class="expand-icon" aria-hidden="true"></span></summary>
+<div class="accordion-body">
+          <p class="case-lead">Can reinforcement learning improve relocation decisions in a simulated container yard?</p>
+          <div class="project-stack" aria-label="Project technologies"><span>Python / PyTorch</span><span>A2C / DQN</span><span>3D CNN</span><span>Pygame</span></div>
+          <div class="case-prose"><h3>My contribution</h3><p>I built a three-dimensional container-yard simulator, designed state representations and reward functions, and implemented A2C/DQN training and evaluation pipelines. A 3D CNN encodes the yard layout, while the visual simulator makes moves and invalid actions inspectable.</p><h3>Results in two simulated yards</h3><p>I evaluated each model over <strong>50 deployment runs per scenario</strong>. Against a <strong>random-action baseline</strong>, DQN reduced rehandles by approximately <strong>23% in the simpler yard</strong> (44.0 versus 57.0 average operations). In the more complex yard, A2C reduced operations by approximately <strong>40%</strong> (97.2 versus 161.4).</p></div>
+          <figure class="result-figure"><a href="assets/rl-area-1.webp" target="_blank" rel="noopener" aria-label="Open dissertation Figure 16-1, simpler-yard deployment results"><img src="assets/rl-area-1.webp" alt="Original dissertation chart for Area 1: random mean 57.0 operations, DQN 44.0, A2C mean 46.4; manually verified minimum 42.0" width="1465" height="873" loading="lazy"></a><figcaption><strong>Original dissertation · Figure 16-1 · Area 1.</strong> DQN uses 44 operations versus the random baseline's mean of 57. <a href="assets/rl-area-1.webp" target="_blank" rel="noopener">View full size ↗</a></figcaption></figure>
+          <figure class="result-figure"><a href="assets/rl-area-2.webp" target="_blank" rel="noopener" aria-label="Open dissertation Figure 17-1, complex-yard deployment results"><img src="assets/rl-area-2.webp" alt="Original dissertation chart for Area 2: random mean 161.4 operations, DQN mean 98.6, A2C mean 97.2; manually verified minimum 95.0" width="1473" height="877" loading="lazy"></a><figcaption><strong>Original dissertation · Figure 17-1 · Area 2.</strong> A2C averages 97.2 operations versus 161.4 for random actions. The source chart shows both minimum and average operations. <a href="assets/rl-area-2.webp" target="_blank" rel="noopener">View full size ↗</a></figcaption></figure>
+          <div class="case-prose"><h3>What the comparison revealed</h3><p>The results demonstrate scope for learning-based scheduling improvements in the tested settings, while also exposing a generalisation gap: the Area 2 DQN policy performed worse than random when moved to Area 1, whereas A2C transferred more robustly in this test. This made cross-scenario evaluation an important part of the project, not just training-curve inspection.</p></div>
+          
+          <div class="research-output"><span class="eyebrow">UNDERGRADUATE DISSERTATION · 2025</span><p>University of Nottingham Ningbo China · BEng (Hons) Electrical and Electronic Engineering</p><p class="output-note">Figures 16-1 and 17-1 are taken directly from the dissertation source; their results were checked against the final PDF.</p></div>
+        </div>
+</details></div>
+    </section>
+    <section class="engineering-section container" id="engineering" aria-labelledby="engineering-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / ENGINEERING & DEMONSTRATIONS</p><h2 id="engineering-title">Ideas, made tangible.</h2></div><p>Embedded AI, edge vision and robotics.<br>Working prototypes, awards and public demonstrations.</p></div>
+      <div class="accordion-list"><details class="project-accordion" id="deskpal">
+<summary><span class="project-number">05</span><span class="accordion-title"><span class="accordion-label">UNNC · AWARD-WINNING IOT PROJECT</span><strong>DeskPal — an embedded AI companion</strong><span>On-device motion classification, interactive feedback and MQTT</span></span><span class="summary-result">Best IoT Project Award · Dec 2024</span><span class="expand-icon" aria-hidden="true"></span></summary>
+<div class="accordion-body">
+  <p class="case-lead">An embedded companion that turns sensor readings into small, tangible interactions.</p>
+  <div class="project-stack" aria-label="Project technologies"><span>Wio Terminal</span><span>Edge Impulse</span><span>Embedded ML</span><span>MQTT</span></div>
+  <div class="case-prose">
+    <h3>From sensing to interaction</h3>
+    <p>I designed and built <strong>DeskPal</strong>, a desktop virtual pet on a Seeed Wio Terminal. The prototype combines accelerometer-based classification, temperature and humidity sensing, a light sensor and an LCD interface to respond to movement and the surrounding environment.</p>
+    <p>I trained an Edge Impulse MLP classifier for <strong>three device-motion classes: idle, rise and wave</strong>, deployed inference on the device, and connected its predictions to an expression and reward state machine. Bidirectional MQTT messaging carries environmental readings, reminders and user-supplied weather information between the device and a phone or computer.</p>
+  </div>
+  <div class="photo-pair">
+    <figure class="result-figure"><a href="assets/deskpal-prototype.webp" target="_blank" rel="noopener" aria-label="Open the DeskPal prototype photograph at full size"><img src="assets/deskpal-prototype.webp" alt="DeskPal prototype on a Wio Terminal, showing a smiling face, motion-class probabilities and environmental readings" width="1900" height="1424" loading="lazy"></a><figcaption>Working prototype: on-device predictions drive the virtual pet's response. Original demonstration photograph.</figcaption></figure>
+    <figure class="result-figure"><a href="assets/deskpal-reminder.webp" target="_blank" rel="noopener" aria-label="Open the DeskPal reminder photograph at full size"><img src="assets/deskpal-reminder.webp" alt="The same DeskPal device displaying an unhappy expression and an inactivity reminder" width="1900" height="1424" loading="lazy"></a><figcaption>Inactivity-reminder state, demonstrated alongside MQTT notifications. Original demonstration photograph.</figcaption></figure>
+  </div>
+  <div class="case-prose"><h3>Outcome & recognition</h3><p>The demonstrable outcome is a complete <strong>sensing → on-device inference → interactive feedback → MQTT notification</strong> loop. DeskPal received the <strong>Best IoT Project Award</strong> for the EEEE3124 Internet of Things mini project at UNNC, with the certificate dated <strong>December 2024</strong>.</p></div>
+  <figure class="result-figure certificate-figure"><a href="assets/deskpal-award.webp" target="_blank" rel="noopener" aria-label="View the original Best IoT Project Award certificate"><img src="assets/deskpal-award.webp" alt="UNNC Best IoT Project Award certificate awarded to Zhe Chen for Deskpal, dated December 2024" width="1900" height="1344" loading="lazy"></a><figcaption>Original award certificate · EEEE3124 Internet of Things (2024/25) Mini Project. <a href="assets/deskpal-award.webp" target="_blank" rel="noopener">View full size ↗</a></figcaption></figure>
+  
+</div>
+</details>
+<details class="project-accordion" id="jetson">
+<summary><span class="project-number">06</span><span class="accordion-title"><span class="accordion-label">UNNC · SUMMER RESEARCH · 2024</span><strong>Jetson Nano sports-camera vision</strong><span>Panoramic stitching, object detection and edge deployment</span></span><span class="summary-result">OpenCV · YOLOv5 · edge vision</span><span class="expand-icon" aria-hidden="true"></span></summary>
+<div class="accordion-body">
+  <p class="case-lead">Bringing a sports-camera computer-vision pipeline onto a small edge device.</p>
+  <div class="project-stack" aria-label="Project technologies"><span>Jetson Nano</span><span>OpenCV</span><span>YOLOv5</span><span>ORB / homography</span><span>Roboflow</span></div>
+  <div class="case-prose"><h3>Project & contribution</h3><p>As part of a UNNC summer undergraduate research team, I worked on <strong>sports-camera video processing with an NVIDIA Jetson Nano</strong>. The project combined camera input, panoramic image stitching, object detection and video streaming for viewing a wider sports scene.</p><p>I worked on YOLOv5 fine-tuning and edge deployment, OpenCV-based processing, and <strong>ORB feature matching with homography estimation</strong> for panoramic stitching. This connected model development with practical camera and embedded-device constraints.</p><h3>What it adds to my work</h3><p>Hands-on experience connecting computer vision to a physical capture pipeline: preparing image data, matching overlapping views, and bringing detection onto an edge platform rather than working only with offline datasets.</p></div>
+  <div class="research-output"><span class="eyebrow">SUMMER UNDERGRADUATE RESEARCH · JUN–SEP 2024</span><p><cite>Sports Camera Streaming Using an NVIDIA Jetson Nano</cite><br>University of Nottingham Ningbo China</p></div>
+</div>
+</details>
+<details class="project-accordion" id="mqtt">
+<summary><span class="project-number">07</span><span class="accordion-title"><span class="accordion-label">UNNC SMART MEDICINE LAB · 2023–2024</span><strong>Smart-home sensing over MQTT</strong><span>From M5Stack / ESP32 measurements to an Ubuntu host</span></span><span class="summary-result">Open Day exhibition · IoT prototype</span><span class="expand-icon" aria-hidden="true"></span></summary>
+<div class="accordion-body">
+  <p class="case-lead">Making smart-home sensor data visible, connected and ready for further analysis.</p>
+  <div class="project-stack" aria-label="Project technologies"><span>M5Stack</span><span>ESP32</span><span>Bluetooth</span><span>MQTT / JSON</span><span>Ubuntu</span></div>
+  <div class="case-prose"><h3>Project & contribution</h3><p>At the <strong>UNNC Smart Medicine Laboratory</strong>, I led a smart-home IoT prototype that connected M5Stack components, an ESP32 gateway and Bluetooth sensor acquisition. Sensor readings were transmitted as JSON through MQTT to an Ubuntu host for monitoring and downstream analysis.</p><p>The task was to make the full device-to-host chain work together: collect measurements, structure messages, and connect the sensing hardware to the receiving environment.</p><h3>Demonstrated outcome</h3><p>The working prototype was <strong>exhibited at a university Open Day</strong>, making the sensing and communication workflow accessible to visitors. This was a hands-on laboratory demonstration, separate from the federated-learning manuscript and its model-evaluation results.</p></div>
+  <div class="demonstration-note"><span class="eyebrow">OPEN DAY EXHIBITION</span><p>Smart Medicine Laboratory · Engineering prototype</p></div>
+</div>
+</details>
+<details class="project-accordion" id="unitree">
+<summary><span class="project-number">08</span><span class="accordion-title"><span class="accordion-label">ROBOTICS PROJECT · SUMMER 2024</span><strong>Unitree Go2 perception & sorting</strong><span>Depth-camera perception and robotic-arm integration</span></span><span class="summary-result">Open Day exhibition · Ubuntu / ROS / CV</span><span class="expand-icon" aria-hidden="true"></span></summary>
+<div class="accordion-body">
+  <p class="case-lead">Connecting visual perception to a real robot's physical task.</p>
+  <div class="project-stack" aria-label="Project technologies"><span>Unitree Go2</span><span>Ubuntu</span><span>ROS</span><span>Computer vision</span><span>Depth camera</span></div>
+  <div class="case-prose"><h3>Project & contribution</h3><p>In a summer 2024 robotics project, I worked with a <strong>Unitree Go2 quadruped, a depth camera and a robotic arm</strong> on a waste-detection and sorting prototype. The task connected visual detection and target localisation with grasping and placement into the corresponding bin.</p><p>The project gave me hands-on exposure to <strong>Ubuntu, ROS and computer-vision integration</strong> in a physical robotics setting, complementing my work with robot kinematics and simulation.</p><h3>Demonstrated outcome</h3><p>The robot prototype was <strong>exhibited at a university Open Day</strong>.</p></div>
+  <div class="demonstration-note"><span class="eyebrow">OPEN DAY EXHIBITION</span><p>Physical robot demonstration</p></div>
+  
+</div>
+</details></div>
+    </section>
+    <section class="background-section" id="background" aria-labelledby="background-title"><div class="container background-grid"><div><p class="eyebrow">03 / BACKGROUND</p><h2 id="background-title">An engineering foundation.<br><em>A research mindset.</em></h2><p>My work spans electrical engineering, medical robotics and AI systems, from collecting real-world signals to evaluating how a model uses them.</p><div class="background-methods"><h3>Methods & tools</h3><p>Python · PyTorch · Agent evaluation · RAG<br>Federated learning · Reinforcement learning<br>ESP32 · CoppeliaSim · Robot kinematics<br>Ubuntu · ROS · OpenCV · Jetson Nano</p></div></div><div class="education-list"><article><span class="eyebrow">CURRENT · RESEARCH EXPERIENCE</span><h3>Imperial College London<br>Hamlyn Centre · I-thread Lab</h3><p>Research Assistant (RA)</p><span class="education-note">AD-related research: wearable sensing and auditable AI-agent analysis; supporting work on speech-metric checks and report interfaces.</span></article><article><span class="eyebrow">2025.10 — 2026.09</span><h3>Imperial College London</h3><p>MRes · Medical Robotics</p><span class="education-note">MRes research completed; formal degree award pending.</span></article><article><span class="eyebrow">2021.09 — 2025.06</span><h3>University of Nottingham<br>Ningbo China</h3><p>BEng (Hons) · Electrical and Electronic Engineering</p><span class="education-note">First-Class Honours</span></article><article><span class="eyebrow">2023.09 — 2025.07</span><h3>UNNC Smart Medicine Laboratory</h3><p>Research Intern / Project Lead</p><span class="education-note">Smart-home IoT & federated learning</span></article></div></div></section>
+    <section class="tools-section container" id="code" aria-labelledby="code-title"><div class="section-heading"><div><p class="eyebrow">04 / OPEN-SOURCE TOOLS</p><h2 id="code-title">Built along the way.</h2></div><a class="text-link" href="https://github.com/CZ114" target="_blank" rel="noopener noreferrer">All repositories <span aria-hidden="true">↗</span></a></div><div class="accordion-list compact-accordions">
+      <details class="project-accordion" id="vibedog"><summary><span class="project-number">09</span><span class="accordion-title"><span class="accordion-label">PERSONAL TOOL · MAY–JUN 2026</span><strong>Vibedog-for-agents</strong><span>Human oversight for coding agents</span></span><span class="summary-result">AI-assisted development</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="accordion-body"><p>A small desktop supervision tool for displaying agent activity, approving actions and stopping execution. Built with AI-assisted development to support human oversight of coding agents.</p><a class="text-link" href="https://github.com/CZ114/Vibedog-for-agents" target="_blank" rel="noopener noreferrer">Explore the repository <span aria-hidden="true">↗</span></a></div></details>
+      <details class="project-accordion" id="audio"><summary><span class="project-number">10</span><span class="accordion-title"><span class="accordion-label">RESEARCH SUPPORT TOOL</span><strong>esp32-audio-ai</strong><span>From microphone input to speech evidence</span></span><span class="summary-result">ESP32 + Whisper</span><span class="expand-icon" aria-hidden="true"></span></summary><div class="accordion-body"><p>A precursor to the larger wearable platform: ESP32 audio capture and transmission, Whisper speech-to-text, and basic pause and speech-rate statistics. The tool establishes a practical acquisition and transcription path for subsequent research.</p><a class="text-link" href="https://github.com/CZ114/esp32-audio-ai" target="_blank" rel="noopener noreferrer">Explore the repository <span aria-hidden="true">↗</span></a></div></details>
+    </div></section>
+    <section class="contact-section container" id="contact"><p class="eyebrow">LET'S CONNECT</p><div class="contact-row"><h2>Interested in similar questions?</h2><a href="mailto:zc2325@ic.ac.uk">zc2325@ic.ac.uk <span aria-hidden="true">↗</span></a></div><p>I welcome conversations about multimodal sensing, AI agents and research opportunities.</p></section>
+  </main>
+  <footer class="site-footer container"><span>© 2026 Zhe Chen</span><span>Wearable sensing. Auditable intelligence.</span><a href="#about">Back to top ↑</a></footer>
+</body>
+</html>
