@@ -42,7 +42,7 @@ document.querySelectorAll('.project-accordion').forEach((project) => {
   const closeButton = document.createElement('button');
   closeButton.type = 'button';
   closeButton.className = 'project-close';
-  closeButton.textContent = 'Close project ↑';
+  closeButton.textContent = project.dataset.closeLabel || 'Close project ↑';
   closeButton.addEventListener('click', () => {
     project.open = false;
     summary.focus({ preventScroll: true });
